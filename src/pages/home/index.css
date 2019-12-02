@@ -1,0 +1,17 @@
+
+.home .code-box-demo>div>.ant-layout {
+  margin-bottom: 48px;
+}
+
+.home .code-box-demo>div>.ant-layout:last-child {
+  margin: 0;
+}
+
+.home .test-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home .test-header a {
+  color: #fff;
+}

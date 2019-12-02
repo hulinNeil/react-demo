@@ -1,2 +1,1 @@
-# react-demo
-简单介绍 react 用法的 demo
+#### React 入门 demo
