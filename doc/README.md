@@ -19,7 +19,7 @@ class HelloMessage extends Component {
 
 #### 快速上手
 
-1.安装 yarn/create-react-app:  (yarn)[https://yarnpkg.com/zh-Hans/]（react 官方推荐的包管理工具，项目中使用 npm 如果出了问题，换成 yarn 或许就好了~~）、create-react-app（react 脚手架）
+1.安装 yarn/create-react-app:  [yarn](https://yarnpkg.com/zh-Hans/)（react 官方推荐的包管理工具，项目中使用 npm 如果出了问题，换成 yarn 或许就好了~~）、create-react-app（react 脚手架）
 
 ```bash 
 # yarn global add create-react-app
