@@ -88,6 +88,29 @@ react 中，没有提供这样的配置，是需要自己以 **组件** 的形�
 
 示例参考demo：/src/route.js     /src/pages/App.js    /src/pages/route/route.js
 
+#### 菜单导航
+
+一般应用都会有一部分公共的地方，如后台系统的左侧导航或顶部导航，m 站的底部 tab。
+
+1. 使用路由嵌套：在 demo 中我们使用的是路由嵌套的方式，即：有菜单的地方，就给他加一个 route，'/app/handler'，'/app/props'，这样的好处是理解起来好点，但是有个坏处是，如果路由是 '/app/prop123'，这样的，若没有定义这个路由是不会报错的，会返回 '/app' 的（当然这种也是可以解决的就是麻烦点~）。 
+
+2. 不使用路由嵌套：利用 `<Route />` 标签的 path，进行多次匹配，如下示例这种匹配方式，将 Tab 页面提出来，单独作为一个 route 组件，当匹配到路径时，就添加对应的 dom，[效果展示](http://www.neiltop.com:808/)。
+	```js
+	export default () => (
+	    <Router>
+	        <Switch>
+	            <Route path="/" exact component={Mv} />
+	            <Route path="/music" component={Music} />
+	            <Route path="/center" component={Center} />
+	            <Route path="/detail" component={Detail} />
+	            <Route component={Error} />
+	        </Switch>
+			<Route exact path={["/", "/music", "/center"]} component={Tab} />
+	    </Router >
+	);
+	```
+
+
 #### 路由守卫
 
 react-router 没有提供 vue 里面的路由守卫，但是我们可以通过编写 js 到达类似的效果，参考：/src/pages/App.js。
